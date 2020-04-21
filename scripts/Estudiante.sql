@@ -1,13 +1,13 @@
 CREATE TABLE public."Estudiante"
 (
-    domicilio character varying(100),
-    email character varying(20),
+    no_cuenta integer,
+    nombre character varying(20),
+    domicilio character varying(30),
     fotografia bytea,
     no_celular integer,
-    no_cuenta serial,
-    nombre character varying(100),
-    instituto character varying,
-    PRIMARY KEY (no_cuenta)
+    email character varying(20),
+    instituto character varying(60),
+    CONSTRAINT id_estudiante_pkey PRIMARY KEY (no_cuenta)
 );
 
 ALTER TABLE public."Estudiante"

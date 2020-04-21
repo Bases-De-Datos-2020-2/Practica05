@@ -1,14 +1,16 @@
 CREATE TABLE public."Profesor"
 (
-    domicilio character varying(100),
-    email character varying(20),
+    "No_profesor" integer NOT NULL,
+    "nombre " character varying(20) COLLATE pg_catalog."default",
+    domicilio character varying(30) COLLATE pg_catalog."default",
     fotografia bytea,
     no_celular integer,
-    no_cuenta serial,
-    nombre character varying(100),
-    instituto character varying,
-    PRIMARY KEY (no_cuenta)
-);
+    email character varying(20) COLLATE pg_catalog."default",
+    intituto character varying(60) COLLATE pg_catalog."default",
+    CONSTRAINT id_profesor_pkey PRIMARY KEY ("No_profesor")
+)
+
+TABLESPACE pg_default;
 
 ALTER TABLE public."Profesor"
     OWNER to postgres;
